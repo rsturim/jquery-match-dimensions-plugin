@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Parent-Child Fader</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="../jquery.matchDimensions.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    var $divs_1 = $(".group-1 > div");
+    var $divs_2 = $(".group-2 > div");
+    // var $divs_3 = $(".group-3 > div");
+
+    // $("#group-1:button").toggle(
+    //   function () {
+    //     $this = $(this)
+    //     $this.attr("value", "Undo");
+    //     $divs_1.matchDimensions();
+    //   },
+    //   function () {
+    //     $this.attr("value", "match heights");
+    //     $divs_1.css("height", "auto");
+    //   }
+    // );
+    // 
+    // $("#group-2:button").toggle(
+    //   function () {
+    //     $this = $(this)
+    //     $this.attr("value", "Undo");
+    //     $divs_2.matchDimensions();
+    //   },
+    //   function () {
+    //     $this.attr("value", "match heights");
+    //     $divs_2.css("height", "auto");
+    //   }
+    // );
+
+    // var $divs_3 = $("#group-3:button").parent().next().find("div");
+
+    $(":button").toggle(
+      function () {
+        $this = $(this)
+        $this.attr("value", "Undo");
+        $this.parent().next().find("div").matchDimensions();
+      },
+      function () {
+        $this.attr("value", "match heights");
+        $this.parent().next().find("div").css("height", "auto");
+      }
+    );
+
+
+
+  });
+  </script>
+</head>
+
+<body>
+  <div id="page-wrap">
+    <div><input type="button" id="group-1" name="group-1" value="match heights"></div>
+    <div class="group-1 clearfix">
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div>Tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+
+    <div><input type="button" id="group-2" name="group-2" value="match heights"></div>
+    <div class="group-2 clearfix">
+      <div style="width:100px;">Lorem ipsum dolor sit amet.</div>
+      <div style="width:175px;">Lorem ipsum dolor sit amet.</div>
+      <div style="width:120px;">Incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div style="width:190px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+
+    <div><input type="button" id="group-3" name="group-3" value="match heights"></div>
+    <div class="group-3 clearfix">
+      <div>Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div>Lorem abore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiati.</div>
+      <div>Lorem Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+
+  </div>
+</body>
+</html>

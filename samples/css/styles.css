@@ -1,0 +1,65 @@
+html {
+  font-family:arial, helvetica, sans-serif;
+  font-size:10px;
+  background-color:#222;
+}
+a {outline: none;}
+a:active, a:focus { outline: 0 }
+a:focus {-moz-outline-style: none;}
+
+input[type="button"] {
+  width:100px;
+  margin-bottom:12px;
+}
+#page-wrap {
+  margin:0 auto;
+  width:1000px;
+  background-color:#ccc;
+  padding:2em;
+}
+
+.group-1, 
+.group-2, 
+.group-3 {
+  display:block;
+  padding:12px;
+  background-color:#FEFEFE;
+  width:980px;
+  margin-bottom:4em;
+} 
+
+
+
+.group-1 div,
+.group-2 div,
+.group-3 div {
+  float:left;  
+  margin:0 12px 0 0;
+  padding:12px;
+}
+
+.group-1 div {
+  border: solid 2px orange;
+  width: 200px;
+} 
+
+.group-2 div {
+  border: solid 2px red;
+  width: 200px;
+} 
+
+.group-3 div {
+  border: solid 2px lime;
+  width: 200px;
+} 
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
