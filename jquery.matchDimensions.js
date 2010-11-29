@@ -15,7 +15,7 @@
 *    });
 *
 * @example jQuery("div").matchDimensions();
-* @example jQuery("div")..matchDimensions({maxWidth:200, matchWidth:true, matchHeight:false});
+* @example jQuery("div").matchDimensions({maxWidth:200, matchWidth:true, matchHeight:false});
 */
 
 (function($) {
